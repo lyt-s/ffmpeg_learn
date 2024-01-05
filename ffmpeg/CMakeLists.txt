@@ -1,5 +1,11 @@
 
-add_executable(main main.cpp)
+file(GLOB sources CONFIGURE_DEPENDS *.cpp) 
+foreach (source IN ITEMS ${sources})
+    get_filename_component(name "${source}" NAME_WLE)
+    add_executable(${name} ${name}.cpp)
+    target_include_directories(${name} PRIVATE ${ffmpeg_INCLUDE_DIRS})
+    target_link_libraries(${name} PRIVATE  avformat avcodec avutil )
+endforeach()
 
-target_include_directories(main PRIVATE ${ffmpeg_INCLUDE_DIRS})
-target_link_libraries(main PRIVATE  avformat avcodec avutil)
+
+

@@ -32,6 +32,8 @@ set(THIRD_PARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party)
 # message(STATUS "leveldb version: ${leveldb_VERSION}")
 # set(leveldb_INCLUDE_DIRS ${THIRD_PARTY_DIR}/leveldb/include)
 
+
+
 # ffmpeg 不支持find_package
 
 # find_package(PkgConfig REQUIRED)
@@ -50,18 +52,18 @@ set(THIRD_PARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party)
 
 # message(" ${THIRD_PARTY_DIR}" )
 
-set(ffmpeg_INCLUDE_DIRS ${THIRD_PARTY_DIR}/ffmepg-4.4-ubuntu/include)
+set(ffmpeg_INCLUDE_DIRS ${THIRD_PARTY_DIR}/ffmepg-4.4/include)
 
-find_library(ffmpeg_LIBS 
-                avcodec
-                avdevice
-                avfilter
-                avformat
-                avutil
-                postproc
-                swresample
-                swscale
-                HINTS
-                ${THIRD_PARTY_DIR}/ffmepg-4.4-ubuntu/lib
-)
-message(STATUS "Find ffmpeg_LIBS in ${ffmpeg_LIBS}")
+# find_library(ffmpeg_LIBS 
+#                 avcodec
+#                 avdevice
+#                 avfilter
+#                 avformat
+#                 avutil
+#                 postproc
+#                 swresample
+#                 swscale
+#                 HINTS
+#                 ${THIRD_PARTY_DIR}/ffmepg-4.4-ubuntu/lib
+# )
+# message(STATUS "Find ffmpeg_LIBS in ${ffmpeg_LIBS}")

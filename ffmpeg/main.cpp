@@ -3,14 +3,14 @@
 #include <iostream>
 
 extern "C" {
-#include "libavcodec/avcodec.h"
-#include "libavfilter/avfilter.h"
-#include "libavformat/avformat.h"
-#include "libavutil/avutil.h"
-#include "libavutil/ffversion.h"
-#include "libpostproc/postprocess.h"
-#include "libswresample/swresample.h"
-#include "libswscale/swscale.h"
+#include <libavcodec/avcodec.h>
+#include <libavfilter/avfilter.h>
+#include <libavformat/avformat.h>
+#include <libavutil/avutil.h>
+#include <libavutil/ffversion.h>
+#include <libpostproc/postprocess.h>
+#include <libswresample/swresample.h>
+#include <libswscale/swscale.h>
 }
 
 int main() {
