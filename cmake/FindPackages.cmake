@@ -33,7 +33,6 @@ set(THIRD_PARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party)
 # set(leveldb_INCLUDE_DIRS ${THIRD_PARTY_DIR}/leveldb/include)
 
 # ffmpeg 不支持find_package
-list(APPEND CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/third_party/ffmepg-4.4-ubuntu)
 
 # find_package(PkgConfig REQUIRED)
 
@@ -53,16 +52,15 @@ list(APPEND CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/third_party/ffmepg-4.4-ubuntu)
 
 set(ffmpeg_INCLUDE_DIRS ${THIRD_PARTY_DIR}/ffmepg-4.4-ubuntu/include)
 
-find_libraries(ffmpeg_LIBS 
-                libavcodec.a
-                libavdevice.a
-                libavfilter.a
-                libavformat.a
-                libavutil.a
-                libpostproc.a
-                libswresample.a
-                libswscale.a
-
+find_library(ffmpeg_LIBS 
+                avcodec
+                avdevice
+                avfilter
+                avformat
+                avutil
+                postproc
+                swresample
+                swscale
                 HINTS
                 ${THIRD_PARTY_DIR}/ffmepg-4.4-ubuntu/lib
 )

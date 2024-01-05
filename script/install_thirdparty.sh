@@ -17,9 +17,9 @@ if [ ! -d "$THIRD_PARTY_DIR" ]; then
 fi
 
 cd $THIRD_PARTY_DIR
-#Install Boost
-if [ ! -d "$THIRD_PARTY_DIR/ffmepg-4.4-ubuntu" ]; then
-    rm -rf ffmepg-4.4-ubuntu n4.4.1.zip
+#Install ffmpeg
+if [ ! -d "$THIRD_PARTY_DIR/ffmepg-4.4" ]; then
+    rm -rf FFmpeg-n4.4.1 n4.4.1.zip
     wget https://github.com/FFmpeg/FFmpeg/archive/refs/tags/n4.4.1.zip
     unzip n4.4.1.zip
     cd  ./FFmpeg-n4.4.1
@@ -31,12 +31,10 @@ if [ ! -d "$THIRD_PARTY_DIR/ffmepg-4.4-ubuntu" ]; then
         --enable-gpl \
         --enable-shared \
         --enable-version3
-
-
     make -j8 || RET=$?
     make install || RET=$?
     cd ..
-    rm -rf ffmepg-4.4-ubuntu n4.4.1.zip
+    rm -rf FFmpeg-n4.4.1 n4.4.1.zip
     if [ $RET -ne 0 ]; then
         rm -rf ffmepg-4.4
         echo "Intall ffmpeg failed"

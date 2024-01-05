@@ -1,7 +1,7 @@
 
-   #cmake -G Ninja -S . -B ./build -DUSE_AVX_INSTRUCTIONS=1 -DCMAKE_INSTALL_PREFIX=$THIRD_PARTY_DIR/dlib
-   # cmake --build ./build || RET=$?
-   # cmake --build ./build --target install || RET=$?
+# cmake -G Ninja -S . -B ./build -DUSE_AVX_INSTRUCTIONS=1 -DCMAKE_INSTALL_PREFIX=$THIRD_PARTY_DIR/dlib
+# cmake --build ./build || RET=$?
+# cmake --build ./build --target install || RET=$?
 
    
 cmake_minimum_required(VERSION 3.18)
@@ -20,6 +20,8 @@ project(ffmpeg_learn LANGUAGES CXX)
 #----------------------------------------------------------------
 
 include(cmake/FindPackages.cmake)
-
+# 有问题
+# include(cmake/FindFFmpeg.cmake) 
 #----------------------------------------------------------------
+
 add_subdirectory(ffmpeg)
