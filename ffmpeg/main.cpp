@@ -17,7 +17,7 @@ int main() {
   AVFormatContext* fmt_ctx = avformat_alloc_context();  // 创建对象并初始化
   int ret = 0;
   // const char* fileName = "../video/juren.mp4";  // 文件地址
-  std::string fileName = "../video/juren.mp4";  // 文件地址
+  std::string fileName = "../video/juren-5s.mp4";  // 文件地址
   do {
     // 打开文件
     if ((ret = avformat_open_input(&fmt_ctx, fileName.c_str(), NULL, NULL)) < 0)

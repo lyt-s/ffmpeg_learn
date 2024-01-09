@@ -19,9 +19,9 @@ extern "C" {
 }
 
 int main() {
-  std::string filePath = "../video/juren.mp4";  // 文件地址
-  int videoStreamIndex = -1;                    // 视频流所在流序列中的索引
-  int ret = 0;                                  // 默认返回值
+  std::string filePath = "../video/juren-5s.mp4";  // 文件地址
+  int videoStreamIndex = -1;                       // 视频流所在流序列中的索引
+  int ret = 0;                                     // 默认返回值
 
   // 需要的变量名并初始化
   AVFormatContext *fmtCtx = nullptr;
