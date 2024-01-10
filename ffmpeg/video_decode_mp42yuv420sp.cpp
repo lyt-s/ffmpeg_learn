@@ -22,6 +22,9 @@ extern "C" {
 #include "libswscale/swscale.h"
 }
 
+// 因为FFmpeg使用CPU软解后的YUV格式为YUV420P，
+// 本部分在CPU软解码之后，我们将其转换为YUV420SP并写入本地文件。
+//  ffplay -pixel_format nv12 -video_size 1920x1080 result.yuv
 int main() {
   FILE *fp = fopen("result_NV12.yuv", "w+b");
   if (fp == NULL) {
