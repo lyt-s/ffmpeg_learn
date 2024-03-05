@@ -17,6 +17,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(ffmpeg_learn LANGUAGES CXX)
+
 #----------------------------------------------------------------
 
 include(cmake/FindPackages.cmake)
@@ -24,3 +25,5 @@ include(cmake/FindPackages.cmake)
 # include(cmake/FindFFmpeg.cmake) 
 #----------------------------------------------------------------
 add_subdirectory(ffmpeg)
+
+add_subdirectory(Golomb)

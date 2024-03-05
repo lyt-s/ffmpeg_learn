@@ -21,6 +21,7 @@ extern "C" {
 }
 // h264 mp4 811k
 // yuv420p 351MB
+// 4.3 MB -> 904MB
 
 int main() {
   FILE *fp = fopen("result_420p.yuv", "w+b");
@@ -29,8 +30,8 @@ int main() {
     return -1;
   }
 
-  std::string filePath = "../video/juren-5s.mp4";  // 文件地址
-  int videoStreamIndex = -1;                       // 视频流所在的索引
+  std::string filePath = "../video/test_video.mp4";  // 文件地址
+  int videoStreamIndex = -1;                         // 视频流所在的索引
   int ret = 0;
 
   // 需要的变量名并初始化
